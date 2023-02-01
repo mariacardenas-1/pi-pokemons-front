@@ -30,7 +30,7 @@ const Home = () => {
 
     useEffect(() => {
         const getTypes = async() =>{
-            const dbTypes = await (await axios.get('http://localhost:3001/types')).data
+            const dbTypes = await (await axios.get('https://pokemons-pi.onrender.com/types')).data
         }
         getTypes()
     }, []);
@@ -76,7 +76,7 @@ const Home = () => {
              <div className={styles.buttonshome}>
                 {filterPokemons.length === 1 && 
                 <button className={styles.rerender} onClick={reload} >Volver</button> }
-                <Link className={styles.createpokehome} to="/pokemonadventure/create">Create</Link>
+                <Link className={styles.createpokehome} to="/create">Create</Link>
             </div>
            )}
            

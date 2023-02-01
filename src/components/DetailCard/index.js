@@ -13,7 +13,7 @@ const DetailCard = () => {
     useEffect(() => {
 
         const detailPokemon = async() => {
-            const pokemonInfo = await (await axios.get(`http://localhost:3001/pokemons/${idpk}`)).data
+            const pokemonInfo = await (await axios.get(`https://pokemons-pi.onrender.com/pokemons/${idpk}`)).data
             setPokemon(pokemonInfo)
 
         }
@@ -26,7 +26,7 @@ const DetailCard = () => {
     return (
         <div className={styles.detalle}>
             <div className={styles.detailCard}>
-            <Link to="/pokemonadventure/home" className={styles.back} >
+            <Link to="/home" className={styles.back} >
                     <img className={styles.backIcon} src={backIcon} alt='hola'/> 
             </Link>
             

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const cardPokemon = ({image, name, types, id}) => {
     return (
-        <Link to={`/pokemonadventure/detail/${id}`} className={styles.cardPokemon} >
+        <Link to={`/detail/${id}`} className={styles.cardPokemon} >
             <div className={`${styles.textPokemon} ${styles.child}`}>
                 <span className={styles.name}>{name}</span>
                 <div className={styles.types}>

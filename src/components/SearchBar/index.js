@@ -43,7 +43,7 @@ function handleEnter(e){
             </div>
             <Filters />
             <Order />
-            <Link to='/pokemonadventure/create' className={styles.tooltip}>
+            <Link to='/create' className={styles.tooltip}>
                 <div className={styles.create}></div>
                 <span className={styles.tooltiptext}>Create your own pokemon</span>
             </Link>

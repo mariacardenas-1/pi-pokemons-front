@@ -15,10 +15,10 @@ function App(props) {
   return (
     <Router>
       <div className={styles.App}>
-        <Route exact path='/pokemonadventure' component={Landing}/>
-        <Route exact path='/pokemonadventure/home' component={Home}/>
-        <Route exact path='/pokemonadventure/create' component={CreatePokemon}/>
-        <Route exact path='/pokemonadventure/detail/:id' component={DetailCard }/>
+        <Route exact path='/' component={Landing}/>
+        <Route exact path='/home' component={Home}/>
+        <Route exact path='/create' component={CreatePokemon}/>
+        <Route exact path='/detail/:id' component={DetailCard }/>
       </div>
     </Router>
   );

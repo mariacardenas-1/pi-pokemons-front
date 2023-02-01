@@ -37,7 +37,7 @@ const CreatePokemon = () => {
 
     useEffect(() => {
         const getTypes = async() =>{
-            const dbTypes = await (await axios.get('http://localhost:3001/dbtypes')).data
+            const dbTypes = await (await axios.get('https://pokemons-pi.onrender.com/dbtypes')).data
             setTypes(dbTypes)
         }
         getTypes()
@@ -64,7 +64,7 @@ const CreatePokemon = () => {
                     weight: weight,
                 }
         
-                await axios.post('http://localhost:3001/pokemons', pokemon)
+                await axios.post('https://pokemons-pi.onrender.com/pokemons', pokemon)
                 await setLoader(false)
                 await setSucces(true)
             }catch(error){
@@ -217,7 +217,7 @@ const reload = () =>{
                     {success && <p className={`${styles.label} ${styles.confirmation}`} >Felicidades, tu pokemon <strong> {name}</strong> fue creado correctamente!</p> }
                     {success && 
                         <div className={styles.buttons}>
-                            <Link to='/pokemonadventure/home' className={styles.link}>Back To Home</Link>
+                            <Link to='/home' className={styles.link}>Back To Home</Link>
                             <button className={styles.link} onClick={reload}>Create New Pokemon</button>
                         </div>
                     }

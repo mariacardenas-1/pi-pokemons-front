@@ -14,14 +14,14 @@ export const FILTER_CREATED_BY = 'FILTER_CREATED_BY'
 
 export const searchPokemon = (query) => {
     return async dispatch => {
-        const result = await (await axios.get(`http://localhost:3001/pokemons?name=${query}`)).data
+        const result = await (await axios.get(`https://pokemons-pi.onrender.com/pokemons?name=${query}`)).data
         dispatch({type: SEARCH_BY_QUERY, payload: [result]})
     };
 }
 
 export const loadPokemons = () => {
     return async function (dispatch) {
-        fetch('http://localhost:3001/pokemons')
+        fetch('https://pokemons-pi.onrender.com/pokemons')
         .then(response => response.json())
         .then(json =>{
            dispatch({ type: LOAD_POKEMONS , payload: json })

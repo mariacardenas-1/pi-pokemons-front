@@ -11,7 +11,7 @@ const Filters = () => {
 
     useEffect(() => {
         const getTypes = async() =>{
-            const dbTypes = await (await axios.get('http://localhost:3001/dbtypes')).data
+            const dbTypes = await (await axios.get('https://pokemons-pi.onrender.com/dbtypes')).data
             const nameTypes = dbTypes.map(el => {
                 return el.name
             })
